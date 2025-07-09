@@ -28,6 +28,9 @@
       font-size: 1.2rem;
       cursor: pointer;
     }
+    .payment-form input {
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -54,14 +57,76 @@
     <h2 class="mb-4 text-center">🛒 Your Cart</h2>
     <div id="cart-items" class="mb-3"></div>
     <h4 class="text-end">Total: $<span id="total">0.00</span></h4>
-    <div class="text-end mt-3">
-      <button class="btn btn-success" onclick="checkout()">Buy Now</button>
-    </div>
+  </section>
+
+  <!-- Fake Payment Form -->
+  <section class="container mb-5">
+    <h4 class="mb-3">💳 Payment Details</h4>
+    <form class="row g-3 payment-form" onsubmit="handlePayment(event)">
+      <div class="col-md-6">
+        <label class="form-label">Cardholder Name</label>
+        <input type="text" class="form-control" placeholder="John Doe" required />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Card Number</label>
+        <input type="text" class="form-control" placeholder="1111 2222 3333 4444" required />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Expiry Date</label>
+        <input type="text" class="form-control" placeholder="MM/YY" required />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">CVV</label>
+        <input type="password" class="form-control" placeholder="123" required />
+      </div>
+      <div class="col-md-4 d-flex align-items-end">
+        <button type="submit" class="btn btn-success w-100">Buy Now</button>
+      </div>
+    </form>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4">
-    &copy; 2025 Montana Game Store — All rights reserved.
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-md-left">
+      <div class="row">
+        <!-- Store Info -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h5 class="text-uppercase fw-bold text-info">Montana Game Store</h5>
+          <p>Your trusted source for digital games. Safe. Fast. Affordable.</p>
+        </div>
+        <!-- Quick Links -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold">Contact</h6>
+          <p><i class="fas fa-map-marker-alt me-2"></i> Nairobi, Kenya</p>
+          <p><i class="fas fa-envelope me-2"></i> support@montanastore.com</p>
+          <p><i class="fas fa-phone me-2"></i> +254 712 345 678</p>
+        </div>
+        <!-- Socials -->
+        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold">Follow Us</h6>
+          <a href="#"><i class="fab fa-facebook fa-lg me-3"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-lg me-3"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-lg me-3"></i></a>
+          <a href="#"><i class="fab fa-discord fa-lg me-3"></i></a>
+          <a href="#"><i class="fab fa-vk fa-lg me-3"></i></a>
+        </div>
+      </div>
+      <hr class="my-3 border-light" />
+      <div class="text-center">
+        &copy; 2025 Montana Game Store. All rights reserved.
+      </div>
+    </div>
   </footer>
 
   <!-- Cart Script -->
@@ -99,16 +164,19 @@
       loadCart();
     }
 
-    function checkout() {
+    function handlePayment(event) {
+      event.preventDefault();
+
       const items = JSON.parse(localStorage.getItem('cart')) || [];
       if (items.length === 0) {
         alert('Your cart is empty.');
         return;
       }
 
-      alert('✅ Thank you for your purchase!');
+      alert('✅ Payment successful! Thank you for your purchase.');
       localStorage.removeItem('cart');
       loadCart();
+      event.target.reset();
     }
 
     loadCart();

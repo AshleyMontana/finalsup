@@ -1,51 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Montana</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('images/banner.jpg') center/cover no-repeat;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    form .form-control {
+      border-radius: 8px;
+    }
+    form .btn {
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Montana</a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">Montana</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<div class="container py-5">
-  <h2>Contact Us</h2>
-  <form>
-    <div class="mb-3">
-      <label class="form-label">Name</label>
-      <input type="text" class="form-control" placeholder="Your name" required>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p class="lead">We're here to help. Reach out any time.</p>
     </div>
-    <div class="mb-3">
-      <label class="form-label">Email</label>
-      <input type="email" class="form-control" placeholder="you@example.com" required>
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Message</label>
-      <textarea class="form-control" rows="5" placeholder="Your message here..." required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Send Message</button>
-  </form>
-</div>
+  </section>
 
-<footer class="bg-dark text-white text-center py-3">
-  &copy; 2025 Montana Game Store
-</footer>
+  <!-- Contact Form -->
+  <section class="container py-5">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <h3>Send us a message</h3>
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-control" placeholder="John Doe" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Your Email</label>
+            <input type="email" class="form-control" placeholder="example@email.com" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Your Message</label>
+            <textarea class="form-control" rows="5" placeholder="Type your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
 
+      <!-- Contact Info -->
+      <div class="col-md-6">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Nairobi, Kenya</p>
+        <p><i class="fas fa-envelope me-2"></i> support@montanastore.com</p>
+        <p><i class="fas fa-phone me-2"></i> +254 712 345 678</p>
+
+        <h5 class="mt-4">Follow Us</h5>
+        <a href="#"><i class="fab fa-facebook fa-lg me-3"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-lg me-3"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-lg me-3"></i></a>
+        <a href="#"><i class="fab fa-discord fa-lg me-3"></i></a>
+        <a href="#"><i class="fab fa-vk fa-lg me-3"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-md-left">
+      <div class="row">
+        <!-- Store Info -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h5 class="text-uppercase fw-bold text-info">Montana Game Store</h5>
+          <p>We’re your #1 stop for all things gaming. Contact us or follow us on social media to stay updated.</p>
+        </div>
+        <!-- Quick Links -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold">Contact</h6>
+          <p><i class="fas fa-map-marker-alt me-2"></i> Nairobi, Kenya</p>
+          <p><i class="fas fa-envelope me-2"></i> support@montanastore.com</p>
+          <p><i class="fas fa-phone me-2"></i> +254 712 345 678</p>
+        </div>
+        <!-- Socials -->
+        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold">Follow Us</h6>
+          <a href="#"><i class="fab fa-facebook fa-lg me-3"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-lg me-3"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-lg me-3"></i></a>
+          <a href="#"><i class="fab fa-discord fa-lg me-3"></i></a>
+          <a href="#"><i class="fab fa-vk fa-lg me-3"></i></a>
+        </div>
+      </div>
+      <hr class="my-3 border-light" />
+      <div class="text-center">
+        &copy; 2025 Montana Game Store. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

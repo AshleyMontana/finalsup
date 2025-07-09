@@ -1,0 +1,43 @@
+/* style.css - Montana Game Store */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #333;
+}
+
+.navbar .nav-link {
+  color: white;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #00ffcc;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+footer {
+  background-color: #1e1e1e;
+  color: #ccc;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+button.btn {
+  transition: background-color 0.2s ease-in-out;
+}
+
+button.btn:hover {
+  background-color: #00ffcc;
+  color: #000;
+}

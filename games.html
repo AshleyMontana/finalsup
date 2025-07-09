@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Montana | Games</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Montana</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="games.html">Games</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Game Cards -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4">Our Games</h2>
+    <div class="row">
+
+      <!-- Game 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="images/game1.jpg" class="card-img-top" alt="Game 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cyber Raid</h5>
+            <p class="card-text">$20</p>
+            <button class="btn btn-primary" onclick='addToCart({id:1, name:"Cyber Raid", price:20})'>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="images/game2.jpg" class="card-img-top" alt="Game 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Fantasy Quest</h5>
+            <p class="card-text">$25</p>
+            <button class="btn btn-primary" onclick='addToCart({id:2, name:"Fantasy Quest", price:25})'>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="images/game3.jpg" class="card-img-top" alt="Game 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Speed Master</h5>
+            <p class="card-text">$15</p>
+            <button class="btn btn-primary" onclick='addToCart({id:3, name:"Speed Master", price:15})'>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="images/game4.jpg" class="card-img-top" alt="Game 4">
+          <div class="card-body text-center">
+            <h5 class="card-title">Galaxy War</h5>
+            <p class="card-text">$22</p>
+            <button class="btn btn-primary" onclick='addToCart({id:4, name:"Galaxy War", price:22})'>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="images/game5.jpg" class="card-img-top" alt="Game 5">
+          <div class="card-body text-center">
+            <h5 class="card-title">Zombie Night</h5>
+            <p class="card-text">$18</p>
+            <button class="btn btn-primary" onclick='addToCart({id:5, name:"Zombie Night", price:18})'>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="images/game6.jpg" class="card-img-top" alt="Game 6">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pixel World</h5>
+            <p class="card-text">$12</p>
+            <button class="btn btn-primary" onclick='addToCart({id:6, name:"Pixel World", price:12})'>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 7 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="images/game7.jpg" class="card-img-top" alt="Game 7">
+          <div class="card-body text-center">
+            <h5 class="card-title">Battle Royale</h5>
+            <p class="card-text">$19</p>
+            <button class="btn btn-primary" onclick='addToCart({id:7, name:"Battle Royale", price:19})'>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 8 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="images/game8.jpg" class="card-img-top" alt="Game 8">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mystic Valley</h5>
+            <p class="card-text">$17</p>
+            <button class="btn btn-primary" onclick='addToCart({id:8, name:"Mystic Valley", price:17})'>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 9 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="images/game9.jpg" class="card-img-top" alt="Game 9">
+          <div class="card-body text-center">
+            <h5 class="card-title">Alien Invasion</h5>
+            <p class="card-text">$21</p>
+            <button class="btn btn-primary" onclick='addToCart({id:9, name:"Alien Invasion", price:21})'>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 10 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="images/game10.jpg" class="card-img-top" alt="Game 10">
+          <div class="card-body text-center">
+            <h5 class="card-title">Builder Tycoon</h5>
+            <p class="card-text">$30</p>
+            <button class="btn btn-primary" onclick='addToCart({id:10, name:"Builder Tycoon", price:30})'>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 Montana Game Store. All rights reserved.
+  </footer>
+
+  <script src="js/cart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
